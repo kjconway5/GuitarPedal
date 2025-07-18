@@ -27,7 +27,7 @@ A real-time, FPGA-based digital audio effects processor designed for guitar sign
 - **Power**: 9V barrel input, 5V/3.3V regulated rails
 
 ## 🛠️ Project Milestones
-- [] blank
+- [x] blank
 
 ## 🎸 Effects Modules (Planned)
 - **Distortion / Overdrive**: Hard clip, soft clip, wave shaping
