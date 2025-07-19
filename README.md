@@ -33,6 +33,7 @@ A real-time, FPGA-based digital audio effects processor designed for guitar sign
 - **Noise Gate**: Dynamic threshold-based muting
 
 ## 📁 Repo Structure (planned)
+'''
 GuitarPedal/
 ├── README.md                  # Project overview, setup instructions
 ├── docs/                      # Design docs, diagrams, notes
@@ -63,3 +64,4 @@ GuitarPedal/
 │   │   └── blank
 └── tools/                     # Utility scripts, e.g. flashing tools or log parsers
     └── flash_fpga.sh
+'''
