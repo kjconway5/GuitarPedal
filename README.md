@@ -1,6 +1,13 @@
 # GuitarPedal
 
-A real-time, FPGA-based digital audio effects processor designed for guitar signals. This project combines an FPGA (Basys3 Artix-7) and a microcontroller (ESP32-C3) to implement a modular and customizable effects chain. The FPGA is used to modify the signal and create desired audio effects while the MCU is used to handle all of the user interface.
+A real-time, FPGA-based digital audio effects processor designed for guitar signals. This personal project combines an FPGA (Basys3 Artix-7) and a microcontroller (ESP32-C3) to implement a modular and customizable audio effects chain. The FPGA is used to modify the signal and create desired audio effects while the MCU is used to handle all of the user interface.
+
+## 📦 Hardware
+- **FPGA**: Digilent Basys3 (Artix-7)
+- **Microcontroller**: ESP32-C3 Rust Dev Board
+- **ADC**: PCM1802
+- **DAC**: PCM5102
+- **Op-Amps**: TL072
 
 ## 🎯 Features
 - Real-time audio signal processing
@@ -16,17 +23,13 @@ A real-time, FPGA-based digital audio effects processor designed for guitar sign
 - **Control Path**:  
   `blank`
 
-## 📦 Hardware
-- **FPGA**: Digilent Basys3 (Artix-7)
-- **Microcontroller**: ESP32-C3 Rust Dev Board
-- **ADC**: PCM1802
-- **DAC**: PCM5102
-- **Op-Amps**: TL072
+## 🛠️ Project Goals
+- [] Multiple effects available (distortion, EQ, delay, and a noise gate to start)
+- [] Ability to stack multiple effects at a time
+- [] Ability to control how intensly the effect changes the original signal
+- [] 
 
-## 🛠️ Project Milestones
-- [] Modify the 
-
-## 🎸 Effects Modules (Planned)
+## 🎸 Signal Effects Modules (Planned)
 - **Distortion / Overdrive**: Hard clip, soft clip, wave shaping
 - **Delay / Echo**: Circular buffer w/ tap tempo
 - **EQ / Tone Control**: Adjustable low/mid/high bands
@@ -48,14 +51,14 @@ GuitarPedal/
 │   ├── src/
 │   │   └── blank
 │   └── README.md
-├── fpga/                      # FPGA logic (HDL, constraints, Vivado project)
+├── fpga/                      # FPGA logic (SystemsVerilog, constraints, Vivado project)
 │   ├── src/
 │   │   ├── blank
 │   │   ├── blank
 │   │   ├── effects/
-│   │   │   ├── distortion.vhd
-│   │   │   ├── delay.vhd
-│   │   │   └── eq.vhd
+│   │   │   ├── distortion.sv
+│   │   │   ├── delay.sv
+│   │   │   └── eq.sv
 │   └── constraints/
 │       └── basys3.xdc
 ├── tests/                     # Simulation testbenches or fuzzing
